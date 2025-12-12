@@ -2,10 +2,9 @@ package com.lordsabino.cardview.controller;
 
 import com.lordsabino.cardview.models.Monster;
 import com.lordsabino.cardview.service.MonsterService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/monster")
@@ -20,5 +19,10 @@ public class MonsterController {
     @PostMapping
     public Monster createMonster(@RequestBody Monster monster) {
         return monsterService.addMonster(monster);
+    }
+
+    @GetMapping("/find")
+    public List<Monster> findAllCards() {
+        return monsterService.showMonsters();
     }
 }

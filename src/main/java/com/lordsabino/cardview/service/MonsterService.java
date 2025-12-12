@@ -4,6 +4,8 @@ import com.lordsabino.cardview.models.Monster;
 import com.lordsabino.cardview.repository.MonsterRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MonsterService {
 
@@ -18,5 +20,9 @@ public class MonsterService {
             return monsterRepository.save(monster);
 
         throw new RuntimeException("Monster not found");
+    }
+
+    public List<Monster> showMonsters() {
+        return monsterRepository.findAll();
     }
 }
