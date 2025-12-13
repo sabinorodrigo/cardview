@@ -5,6 +5,7 @@ import com.lordsabino.cardview.service.MonsterService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/monster")
@@ -24,5 +25,10 @@ public class MonsterController {
     @GetMapping("/find")
     public List<Monster> findAllCards() {
         return monsterService.showMonsters();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Monster> getMonsterById(@PathVariable long id) {
+        return monsterService.getMonster(id);
     }
 }
