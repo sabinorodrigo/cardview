@@ -1,0 +1,36 @@
+package br.com.lordsabino.cardview.model.enums;
+
+public enum Types {
+
+	AQUA,
+	BEAST,
+	BEAST_WARRIOR,
+	CYBERSE,
+	DINOSAUR,
+	DIVINE_BEAST,
+	DRAGON,
+	FAIRY,
+	FIEND,
+	FISH,
+	INSECT,
+	ILLUSION,
+	MACHINE,
+	PLANT,
+	PSYCHIC,
+	PYRO,
+	REPTILE,
+	ROCK,
+	SEA_SERPENTE,
+	SPELLCASTER,
+	THUNDER,
+	WARRIOR,
+	WINGED_BEAST,
+	WYRM,
+	ZOMBIE,
+	RITUAL,
+	FUSION,
+	XYZ,
+	SYNCHRO,
+	EFFECT,
+	NORMAL
+}
