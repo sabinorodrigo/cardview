@@ -58,7 +58,16 @@ public class CardApp {
 						"Discard 1 Spell Card, then target 1 Spell Card in your opponent's Graveyard."
 						);
 		
-		List<Card> cards = List.of(darkMagician, celticGuardian, blackLusterSolider, doubleSpell);
+		MagicTrap sevenToolsOfTheBandit =
+				new MagicTrap(
+						"Seven Tool of the Banditds",
+						"Counter",
+						"03819470",
+						"Unlimited",
+						"When a Trap Card is activated: Pay 1000 LP; negate the activation, and if you do, destroy it."
+						);
+		
+		List<Card> cards = List.of(darkMagician, celticGuardian, blackLusterSolider, doubleSpell, sevenToolsOfTheBandit);
 		
 		cards.forEach(System.out::println);
 	}
